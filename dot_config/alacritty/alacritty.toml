@@ -1,4 +1,6 @@
-import = ["/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"]
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Tokyonight_Storm.toml"
+]
 
 [env]
 TERM = "xterm-256color"
@@ -6,17 +8,17 @@ TERM = "xterm-256color"
 [font]
 size = 9
 
-[font.bold]
-family = "Hack Nerd Font"
-style = "Bold"
+  [font.bold]
+  family = "Hack Nerd Font"
+  style = "Bold"
 
-[font.bold_italic]
-family = "Hack Nerd Font"
-style = "Bold Italic"
+  [font.bold_italic]
+  family = "Hack Nerd Font"
+  style = "Bold Italic"
 
-[font.italic]
-family = "Hack Nerd Font"
-style = "Italic"
+  [font.italic]
+  family = "Hack Nerd Font"
+  style = "Italic"
 
-[font.normal]
-style = "Regular"
+  [font.normal]
+  style = "Regular"
