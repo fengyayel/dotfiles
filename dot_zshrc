@@ -83,7 +83,7 @@ plugins=(
 	sudo
 	extract
 	archlinux
-	# zsh-interactive-cd
+	zsh-interactive-cd
 )
 
 
