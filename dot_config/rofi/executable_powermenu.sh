@@ -26,7 +26,7 @@ $shutdown" | rofi -dmenu\
 # Do something based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    /home/$USER/.config/bspwm/scripts/i3lock-fancy/i3lock-fancy.sh
+    betterlockscreen -l dim
 elif [ "$selected_option" == "$logout" ]
 then
     bspc quit
