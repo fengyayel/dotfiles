@@ -63,7 +63,8 @@ gaps bottom 0
 gaps left 0
 gaps right 0
 gaps inner 5
-
+# smart_gaps on
+# hide_edge_borders both
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -101,7 +102,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # smart_borders on
-# default_border pixel 3
+# default_border pixel 0
 
 # single win key
 # bindcode --release 133 exec --no-startup-id $python ~/.scripts/rofi/power.py
@@ -395,6 +396,24 @@ for_window [title="Crow Translate"]         floating enable
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
+set $activeBorder #af99ff
+set $activeMain #7b57ffA0
+set $lessactBorder #666666C0
+set $lessactMain #aba2DfA0
+set $inactBorder #272B3350
+set $inactMain #272B3350
+set $urgentBorder #FF5050FF
+set $urgentMain #FF5050DD
+set $text0 #FFFFFF
+set $text1 #FFFFFF
+
+# class                  border           background       text   indicator         child_border
+client.focused          $activeBorder   $activeMain     $text0 $activeMain      $activeBorder
+client.focused_inactive $lessactBorder  $lessactMain    $text0 $lessactMain     $lessactBorder
+client.unfocused        $inactBorder    $inactMain      $text1 $inactMain       $inactBorder
+client.urgent           $urgentBorder   $urgentMain     $text0 $urgentBorder    $urgentMain
+client.placeholder      $lessactBorder  $lessactMain    $text0 $lessactMain     $lessactBorder
+client.background       #FFFFFF
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -413,6 +432,7 @@ bar {
 
 # i3wm hide bar
 for_window [class="^.*"] border pixel 0
+default_floating_border pixel 0
 # new_window 1pixel
 
 # https://github.com/heckelson/i3-and-kde-plasma
